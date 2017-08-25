@@ -471,7 +471,7 @@ $(document).ready(function() {
           this.tankVsLand();
         } else {
           this.tankVsLand();
-          if (this.player1Turn && this.volley === 2) {
+          if (this.player1Turn && this.volley === 11) {
             game.lockRender = true;
             if (this.player1.score > this.player2.score) {
               $('#winner h1').text(`${player1} wins!`);
