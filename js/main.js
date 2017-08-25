@@ -4,6 +4,7 @@ $(document).ready(function() {
   var player1 = "Player 1";
   var player2 = "Player 2";
   var game;
+  var deduction = (Math.random() * 40) + 20;
   // parameters - change to your liking
   var STEP_MAX = 1.5;
   var STEP_CHANGE = 1.0;
@@ -320,7 +321,7 @@ $(document).ready(function() {
           this.camera.follow(this.player1.bullet);
 
           //  Our launch trajectory is based on the angle of the turret and the power
-          this.physics.arcade.velocityFromRotation(this.player1.turret.rotation, this.player1.power, this.player1.bullet.body.velocity);
+          this.physics.arcade.velocityFromRotation(this.player1.turret.rotation, (this.player1.power- (this.player1.score * deduction)), this.player1.bullet.body.velocity);
           this.player1Turn = false;
         } else {
           //  Now work out where the END of the turret is
@@ -344,7 +345,7 @@ $(document).ready(function() {
           this.camera.follow(this.player2.bullet);
 
           //  Our launch trajectory is based on the angle of the turret and the power
-          this.physics.arcade.velocityFromRotation(this.player2.turret.rotation, this.player2.power, this.player2.bullet.body.velocity);
+          this.physics.arcade.velocityFromRotation(this.player2.turret.rotation, (this.player2.power- (this.player2.score * deduction)), this.player2.bullet.body.velocity);
           this.player1Turn = true;
         }
       },
