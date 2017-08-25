@@ -1,0 +1,75 @@
+*{
+  box-sizing: border-box;
+}
+
+html{
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  font-family: 'Work Sans', sans-serif;
+}
+
+canvas{
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  /*position: relative;*/
+  display: block;
+  height: 100vh;
+  width: 100vw;
+  color: white;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background: url('../assets/tank_background.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+button{
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+#title h1{
+  margin-top: 0;
+  font-size: 5rem;
+}
+
+#winner{
+  position: fixed;
+  color: black;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background: rgba(224,224,224,.8);
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  display: none;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+#winner h1 {
+  font-size: 5rem;
+}
+
+#rules, #player1, #player2{
+  display: none;
+  background: rgba(0,0,0,.8);
+  border: solid black 1px;
+}
