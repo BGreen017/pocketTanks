@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <title>Pocket Tanks</title>
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+    <link rel="shortcut icon" type="favicon.ico" href="favicon.ico" />
+    <link rel="stylesheet" href="css/global.css">
+  </head>
+  <body>
+    <div id="title">
+      <h1> Pocket Tanks </h1>
+      <button type="button" id="instructions">Start Game!</button>
+      <div id="rules">
+        <h2> Instructions </h2>
+        <h4> Each player gets 5 shots. The highest score wins! </h4>
+        <h4> Power ranges from 100 to 600 </h4>
+        <h4> You can fire from any angle </h4>
+        <h2> Player 1 controls:</h2>
+        <h4> W/S Keys to change angle </h4>
+        <h4> A/D Keys to change power </h4>
+        <h2> Player 2 controls:</h2>
+        <h4> Up/Down Arrow Keys to change angle </h4>
+        <h4> Left/Right Arrow Keys to change power </h4>
+        <h3> Space to fire for both! </h3>
+        <button type="button" id="start">Continue!</button>
+      </div>
+    </div>
+    <div id="player1">
+      <h3>Player 1 Name: </h3>
+      <form id="name1" action="index.html" method="post">
+        <input id="p1" type="text" name="" value="Player 1">
+      </form>
+      <br />
+      <button type="submit" form="name1" value="Submit" id="p1name">Submit</button>
+    </div>
+    <div id="player2">
+      <h3>Player 2 Name: </h3>
+      <form id="name2" action="index.html" method="post">
+        <input id="p2" type="text" name="" value="Player 2">
+      </form>
+      <br />
+      <button type="submit" form="name2" value="Submit" id="p2name">Submit</button>
+    </div>
+    <div id="winner">
+      <h1>Player 1 wins</h1>
+      <br />
+      <button type="button" id= "newgame">New Game</button>
+      <br />
+      <button type="button" id= "reset">Reset</button>
+    </div>
+    <script src="./js/jquery-3.2.1.js" charset="utf-8"></script>
+    <script src="js/phaser.js" charset="utf-8"></script>
+    <script src="js/main.js" charset="utf-8"></script>
+  </body>
+</html>
